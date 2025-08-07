@@ -28,7 +28,6 @@ body {
   text-align: left;
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -95,4 +94,34 @@ body {
   font-weight: 500;
   background-color: rgba($primary-color, 0.1);
   color: $primary-color;
+}
+
+.input {
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
+}
+
+.select {
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $border-color;
+  border-radius: $border-radius-sm;
+  font-size: 0.875rem;
+  transition: border-color 0.2s ease;
+  background-color: white;
+  cursor: pointer;
+  width: 100%;
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+  }
 }
