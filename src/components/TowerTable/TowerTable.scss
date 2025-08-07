@@ -1,0 +1,47 @@
+@use '/src/styles/_variables' as *;
+
+.tower-table-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.tower-table {
+  margin: 0;
+  box-shadow: none;
+
+  .tower-name {
+    font-weight: 600;
+    color: $text-primary;
+  }
+
+  .signal-text {
+    margin-left: $spacing-sm;
+    font-size: 0.75rem;
+    color: $text-secondary;
+  }
+}
+
+.no-data {
+  padding: $spacing-2xl;
+  text-align: center;
+  color: $text-secondary;
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: $mobile) {
+  .tower-table {
+    font-size: 0.75rem;
+
+    th,
+    td {
+      padding: $spacing-sm;
+    }
+
+    .tower-name {
+      font-size: 0.875rem;
+    }
+  }
+}
