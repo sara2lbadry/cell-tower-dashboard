@@ -12,3 +12,14 @@ export interface DashboardSummary {
   activeTowers: number;
   averageSignal: number;
 }
+
+export interface CityData {
+  city: string;
+  count: number;
+}
+
+export interface StatusData {
+  status: string;
+  count: number;
+  percentage: number;
+}
