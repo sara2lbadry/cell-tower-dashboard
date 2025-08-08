@@ -2,6 +2,11 @@
 
 .chart-container {
   text-align: center;
+  background: $card-background;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  border: 1px solid $border-color;
+  padding: $spacing-lg;
 
   .chart-title {
     font-size: 1.125rem;
@@ -13,6 +18,10 @@
   .chart-svg {
     max-width: 100%;
     height: auto;
+  }
+
+  @media (max-width: $mobile) {
+    padding: $spacing-md;
   }
 }
 

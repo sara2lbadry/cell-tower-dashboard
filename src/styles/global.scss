@@ -125,3 +125,20 @@ body {
     box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
   }
 }
+
+.signal-strength {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+
+  .bar {
+    width: 4px;
+    height: 12px;
+    background-color: $border-color;
+    border-radius: 1px;
+
+    &.active {
+      background-color: $success-color;
+    }
+  }
+}

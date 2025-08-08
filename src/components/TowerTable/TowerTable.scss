@@ -1,6 +1,10 @@
 @use '/src/styles/_variables' as *;
 
 .tower-table-container {
+  background: $card-background;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  border: 1px solid $border-color;
   padding: 0;
   overflow: hidden;
 }

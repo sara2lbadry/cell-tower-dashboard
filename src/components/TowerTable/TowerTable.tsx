@@ -5,6 +5,20 @@ interface TowerTableProps {
   towersData: CellTower[];
 }
 
+const renderSignalStrength = (strength: number) => {
+  return (
+    <div className="signal-strength">
+      {[1, 2, 3, 4, 5].map((bar) => (
+        <div
+          key={bar}
+          className={`bar ${bar <= strength ? 'active' : ''}`}
+        />
+      ))}
+      <span className="signal-text">({strength}/5)</span>
+    </div>
+  );
+};
+
 function TowerTable({ towersData }: TowerTableProps) {
   return (
     <div className="tower-table-container">
@@ -31,7 +45,7 @@ function TowerTable({ towersData }: TowerTableProps) {
                   {tower.status}
                 </span>
               </td>
-              <td>{tower?.signalStrength}</td>
+              <td>{renderSignalStrength(tower?.signalStrength)}</td>
             </tr>
           ))}
         </tbody>
