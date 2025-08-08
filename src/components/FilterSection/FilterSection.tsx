@@ -1,3 +1,5 @@
+import './FilterSection.scss';
+
 interface FilterSectionProps {
   searchTerm: string;
   selectedCity: string;

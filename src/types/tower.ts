@@ -6,3 +6,9 @@ export interface CellTower {
   status: 'active' | 'offline';
   signalStrength: number; // 1-5
 }
+
+export interface DashboardSummary {
+  totalTowers: number;
+  activeTowers: number;
+  averageSignal: number;
+}

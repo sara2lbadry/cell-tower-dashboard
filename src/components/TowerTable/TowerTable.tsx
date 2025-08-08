@@ -1,4 +1,5 @@
 import type { CellTower } from '../../types/tower';
+import './TowerTable.scss';
 
 interface TowerTableProps {
   towersData: CellTower[];
