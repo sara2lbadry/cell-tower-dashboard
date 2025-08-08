@@ -110,7 +110,7 @@ function PieChart({ data }: PieChartProps) {
       .enter()
       .append('g')
       .attr('class', 'legend-item')
-      .attr('transform', (d, i) => `translate(0, ${i * 25})`);
+      .attr('transform', (_, i) => `translate(0, ${i * 25})`);
 
     legendItems
       .append('rect')
