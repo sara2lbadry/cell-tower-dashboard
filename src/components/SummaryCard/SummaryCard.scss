@@ -1,0 +1,76 @@
+@use '/src/styles/_variables' as *;
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+.summary-card {
+  background: $card-background;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  border: 1px solid $border-color;
+  padding: $spacing-lg;
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: $border-radius-lg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &.total {
+      background-color: rgba($primary-color, 0.1);
+      color: $primary-color;
+    }
+
+    &.active {
+      background-color: rgba($success-color, 0.1);
+      color: $success-color;
+    }
+
+    &.signal {
+      background-color: rgba($warning-color, 0.1);
+      color: $warning-color;
+    }
+  }
+
+  &-content {
+    flex: 1;
+
+    h3 {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $text-secondary;
+      margin-bottom: $spacing-xs;
+    }
+  }
+
+  &-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+  @media (max-width: $mobile) {
+    padding: $spacing-md;
+  }
+}

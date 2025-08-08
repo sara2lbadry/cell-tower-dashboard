@@ -1,0 +1,25 @@
+@use '/src/styles/_variables' as *;
+
+.filter-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-xl;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+  }
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $text-primary;
+  }
+}
