@@ -9,6 +9,7 @@ import './styles/dashboard.scss';
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
+  const [selectedStatus, setSelectedStatus] = useState('');
 
   // Get unique cities for filter dropdown
   const cities = Array.from(new Set(mockTowers.map(tower => tower.city)));
@@ -22,7 +23,10 @@ function App() {
       // Filter by selected city
       const matchesCity = selectedCity === '' || tower.city === selectedCity;
       
-      return matchesSearch && matchesCity;
+      // Filter by selected status
+      const matchesStatus = selectedStatus === '' || tower.status === selectedStatus;
+      
+      return matchesSearch && matchesCity && matchesStatus;
     });
   }
 
@@ -72,9 +76,11 @@ function App() {
         <FilterSection
           searchTerm={searchTerm}
           selectedCity={selectedCity}
+          selectedStatus={selectedStatus}
           allCities={cities}
           onSearchChange={setSearchTerm}
           onCityChange={setSelectedCity}
+          onStatusChange={setSelectedStatus}
         />
 
 
